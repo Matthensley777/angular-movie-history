@@ -1,6 +1,5 @@
 /* globals app: true */
 
-"use strict";
+'use strict';
 
 const app = angular.module("MovieApp", ["ngAnimate", "ngRoute", "ngSanitize"]);
-

@@ -1,5 +1,5 @@
-"use strict";
+'use strict';
 
-app.controller("ratedCtrl", function ($scope) {
-	$scope.page = "ratedCtrl";
+app.controller("RatedCtrl", function($scope){
+  $scope.controller = "RatedCtrl";
 });
