@@ -1,5 +1,5 @@
-"use strict";
+'use strict';
 
-app.controller("searchCtrl", function ($scope){
-	$scope.page = "searchCtrl";
+app.controller("SearchCtrl", function($scope){
+  $scope.controller = "SearchCtrl";
 });
