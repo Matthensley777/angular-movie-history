@@ -23,6 +23,16 @@ $scope.saveRated = (tmdbMovie) => {
                 });
         };
 
+$scope.saveWishlist = (tmdbMovie) => {
+                let newMovie = createMovie(tmdbMovie);
+                newMovie.isWatched = false;
+                MovieService.postNewMovie(newMovie).then(()=> {
+                    $location.path('/wishlist');
+                }).catch((err)=> {
+                    console.log("err saveRated", err);
+                });
+        };
+
 
             $scope.enterPush = (event) => {
                 if (event.keyCode === 13) {
