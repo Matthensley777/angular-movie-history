@@ -1,1 +1,14 @@
-{{hi}}
+<div>
+	<div class="col-xs-4">
+		<img class="poster_path" ng-src="{{img_url}}/w342/{{movie.poster_path}}" alt="">
+
+	</div>
+	<div>
+		<h3>{{movie.title}}</h3>
+		<p>{{movie.overview}}</p>
+
+
+		<p ng-if="movie.isWatched"></p>
+		<p ng-if="!movie.isWatched"></p>
+	</div>
+</div>
