@@ -61,6 +61,10 @@ const createMovieObject = (movie) => {
     };
 };
 
+const getSingleMovie = (movieId) => {
+  return $http.get(`${FIREBASE_CONFIG.databaseURL}/movies/${movieId}.json`);
+};
+
 
   return { getRatedMovies, getWishlistMovies, postNewMovie, deleteMovie, updateMovie, createMovieObject};
 });

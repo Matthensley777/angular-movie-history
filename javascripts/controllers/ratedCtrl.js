@@ -1,6 +1,6 @@
 'use strict';
 
-app.controller("RatedCtrl", function($rootScope, $scope, MovieService){
+app.controller("RatedCtrl", function($location, $rootScope, $scope, MovieService){
   $scope.movies = [];
 
  const getMovies = () => {
@@ -33,5 +33,8 @@ app.controller("RatedCtrl", function($rootScope, $scope, MovieService){
   			console.log("err in starChange", err);
   		});
   	}
+  };
+  $scope.movieDetail = (movieid) => {
+  	$location.path(`/movie/${movieid}`);
   };
 });
