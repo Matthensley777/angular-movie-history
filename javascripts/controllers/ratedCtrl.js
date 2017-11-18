@@ -20,4 +20,18 @@ app.controller("RatedCtrl", function($rootScope, $scope, MovieService){
       console.log("error in deleteMovie", err);
     });
   };
+
+  $scope.starChange = (event, movie) => {
+  	console.log("$event", event.rating);
+  	console.log("movie", movie);
+  	if(event.rating) {
+  		movie.rating = event.rating;
+  		let updatedMovie = MovieService.createMovieObject(movie);
+  		MovieService.updateMovie(updatedMovie, movie.id).then(() => {
+  			getMovies();
+  		}).catch((err) => {
+  			console.log("err in starChange", err);
+  		});
+  	}
+  };
 });
